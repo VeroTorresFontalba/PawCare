@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PawCare</title>
+    <link rel="icon" href="{% static 'img/manolg.png' %}">
+    <link href="{% static 'css/estilos.css' %}" type="text/css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-light bg-light col-12">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+                <a class="navbar-brand" href="">
+                    <img src="{% static 'img/naranja.png' %}" onclick=""  id="manonaranja" style="width: auto; height: 100px; margin-left: 20px;">
+                </a>
+                <div class="collapse navbar-collapse" id="menu">   
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" id="inicio" href="{% url 'home' %}">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="somos" href="{% url 'somos' %}">Quienes somos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="colab" href="{% url 'colaboradores' %}">Colaboradores</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="servicios" href="{% url 'servicios' %}">Servicios</a>
+                        </li>
+                    </ul>
+                </div>
+        </nav>
+    </header>
+
+    <main>
+        {% block content %}
+
+        {% endblock %}
+
+    </main>
+
+    <footer>
+        <footer class="text-center text-lg-start text-muted">
+            <section class="d-flex justify-content-lg-between p-4 border-bottom">
+                <div class="me-5 d-none d-lg-block ">
+                    <span id="spanfooter">Síguenos en nuestras redes sociales:</span>
+                </div>
+                <div>
+                    <a href="" class="me-4 text-reset">
+                        <img src="{% static 'img/facebook.png' %}" style="width: auto; height: 30px"></img>
+                    </a>
+                    <a href="" class="me-4 text-reset">
+                        <img src="{% static 'img/instagram.png' %}" style="width: auto; height: 30px"></img>
+                    </a>
+                    <a href="" class="me-4 text-reset">
+                        <img src="{% static 'img/twitter.png' %}" style="width: auto; height: 30px"></img>
+                    </a>
+                </div>
+            </section>
+            <section class="">
+                <div class="container container-fluid text-center text-md-start mt-5" style="height: 100%;">
+                    <div class="row mt-3">
+                        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4 justify-content-center">
+                            <!-- Content -->
+                            <img src="{% static 'img/logoder.png' %}" class="rounded-circle"
+                                style="width: auto; height: 150px "></img>
+                        </div>
+
+                        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                            <!-- Content -->
+                            <h7 class="text-uppercase text-center fw-bold mb-4">
+                                <i class="fas fa-gem me-3"></i>PawCare
+                            </h7>
+                        </div>
+                        <!-- Grid column -->
+
+                        <!-- Grid column -->
+                        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                            <!-- Links -->
+                            <h7 class="text-uppercase text-center fw-bold mb-4">
+                                Inicio
+                            </h7>
+                        </div>
+                        <!-- Grid column -->
+
+                        <!-- Grid column -->
+                        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                            <!-- Links -->
+                            <h7 class="text-uppercase fw-bold mb-4">
+                                Colaboradores
+                            </h7>
+                        </div>
+                        <!-- Grid column -->
+
+                        <!-- Grid column -->
+                        <div class="col-md-4 col-lg-4 col-xl-4 mx-auto mb-md-0 mb-4">
+                            <!-- Links -->
+                            <h7 class="text-uppercase text-center fw-bold mb-4">
+                                Contacto
+                            </h7>
+                            <p><img src="{% static 'img/geoazul.png' %}" style="width: auto; height: 20px"></img>
+                                Camino Melipilla
+                                1432,
+                                Santiago
+                            </p>
+                            <p>
+                                <img src="{% static 'img/correoazul.png' %}" style="width: auto; height: 20px"></img>
+                                contacto@pawcare.cl
+                            </p>
+                            <p><img src="{% static 'img/fonoazul.png' %}" style="width: auto; height: 20px"></img> + 56
+                                9 8327 4639</p>
+                        </div>
+                        <!-- Grid column -->
+                    </div>
+                    <!-- Grid row -->
+                </div>
+            </section>
+            <!-- Section: Links  -->
+
+            <!-- Copyright -->
+            <div id="copyright" class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+                <h6>Felipe Reyes - Verónica Torres © 2023 Copyright: PawCare</h6>
+                <!--<h6><a class="text-reset fw-bold" href="">PawCare</a></h6>-->
+            </div>
+            <!-- Copyright -->
+        </footer>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+</body>
+</html>
