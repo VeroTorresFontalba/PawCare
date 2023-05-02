@@ -1,0 +1,11 @@
+--Realizar las migraciones
+-)py manage.py makemigrations
+-)py manage.py migrate 
+
+--Si queremos cambiar el color del admin 
+-)https://pypi.org/project/django-admin-interface/
+
+--Ya cree un super usuario
+-usuer: felipe
+-password:123456
+
