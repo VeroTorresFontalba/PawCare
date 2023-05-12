@@ -1,0 +1,147 @@
+
+{% extends 'base.html' %}
+
+{% block content %} 
+
+{% load static %}
+
+
+<style>
+    .bg{
+        background-image: url({% static 'img/fotopararegistro.png' %});
+        background-position: center center;
+        width:100%;
+        alt:100%;
+        border-radius:5px;
+    }
+</style>
+
+
+
+<div class="container w-75 bg-primary mt-5 rounded shadow">
+    <div class="row align-item-stretch">
+        <div class="col bg d-none d-lg-block rounded">
+        </div>
+
+        
+        <div class="col bg-white p-5 rounded-end">
+            <div class="text-end">
+                <img src="{% static 'img/logoup.png' %}" width="78" alt="" >
+            </div>
+            <h2 class="fw-bold text-center pt5 mb-5">Registro de usuario</h2>
+
+            <form method="POST"> {% csrf_token %}
+                
+               <div class="mb-4">
+
+                    <div class = "form-group">
+                        <label class="form-label">Nombre de usuario:</label>
+                    <!-- <input type="text" class="form-control"> -->
+                        <div class="input-group">
+                            <span class="input-group-label"><i class="fi-user"></i></span>
+                        {{ form.username }}
+                        </div>
+                    </div> 
+                        <br>
+                    
+                    <div class = "form-group">
+                        <label  class="form-label">Correo Electronico:</label>
+                    <!-- <input type="email" class="form-control" > -->
+                    <div class="input-group">
+                        <span class="input-group-label"><i class="fi-mail"></i></span>
+                        {{ form.email }}
+                        </div>
+                    </div>
+
+
+                        <br>
+                    <div class = "form-group">
+                        <label  class="form-label">Rut:</label>
+                    <!-- <input type="number" class="form-control" > -->
+                    <div class="input-group">
+                        <span class="input-group-label"><i class="fi-mail"></i></span>
+                        {{ form.rut }} 
+                         </div>
+                    </div>
+
+                        <br>
+                    <div class = "form-group">
+                        <label  class="form-label">Nombres:</label>
+                    <!-- <input type="text" class="form-control" > -->
+                    <div class="input-group">
+                        <span class="input-group-label"><i class="fi-book"></i></span>
+                        {{ form.nombres }} 
+                        </div>
+                    </div>
+
+                        <br>
+                    <div class = "form-group">
+                        <label  class="form-label">Apellidos:</label>
+                    <!-- <input type="text" class="form-control" >-->
+                    <div class="input-group">
+                        <span class="input-group-label"><i class="fi-book"></i></span>
+                        {{ form.apellidos }} 
+                        </div>
+                    </div>
+
+                        <br>
+
+                    <div class = "form-group">
+                        <label  class="form-label">Telefono:</label>
+                    <!-- <input type="number" class="form-control" > -->
+                    <div class="input-group">
+                        <span class="input-group-label"><i class="fi-mail"></i></span>
+                        {{ form.telefono }} 
+                        </div>
+                    </div>
+
+                        <br>
+
+
+                    <div class = "form-group">
+                        <label  class="form-label">Tipo de usuarios:</label>
+                    <!-- <input type="text" class="form-control" > -->
+                    <div class="input-group">
+
+                        {{ form.tipodeusuario }} 
+                        </div>
+                    </div>
+
+                        <br>
+ 
+                    <div class = "form-group">
+                        <label  class="form-label">Crea una contraseña :</label>
+                    <!-- <input type="password" class="form-control" > -->
+                    <div class="input-group">
+                        <span class="input-group-label"><i class="fi-key"></i></span>
+                        {{ form.password1 }} 
+                        </div>
+                    </div>
+
+                        
+                        <br>
+                    <div class="input-group">
+                        <label  class="form-label">Confirma contraseña:</label>
+                    <!-- <input type="password" class="form-control" > -->
+                    <div class="input-group">
+                        <span class="input-group-label"><i class="fi-key"></i></span>
+
+                        {{ form.password2 }} 
+                    </div>
+                    </div>
+                </div>
+                <br>
+                <div class="d-grid">
+                    <button type="submit" class="btn btn-info">Registrar</button>
+                </div>
+                   
+                <div class="mb-4"></div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+
+
+{% endblock %}
