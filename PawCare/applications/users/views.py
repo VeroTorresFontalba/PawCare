@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.urls import reverse_lazy,reverse
+from django.urls import reverse_lazy, reverse
 
 from django.contrib.auth import authenticate,login, logout
 from django.http import HttpResponseRedirect
@@ -11,6 +11,9 @@ from django.views.generic import (
 from django.views.generic.edit import (
     FormView
 )
+
+
+
 from .forms import UserRegisterForm, LoginForm
 
 from .models import User
@@ -28,7 +31,7 @@ class UserRegisterView(FormView):
             form.cleaned_data['password1'],
             nombres = form.cleaned_data['nombres'],
             apellidos = form.cleaned_data['apellidos'],
-            tipodeusuario = form.cleaned_data['tipodeusuario'],
+            categoria = form.cleaned_data['categoria'],
         )
         return super(UserRegisterView, self).form_valid(form)
     
@@ -50,5 +53,5 @@ class LogoutView(View):
     def get(self, request, *args, **kwargs):
         logout(request)
         return HttpResponseRedirect(
-            reverse('user_app:login')
+            reverse('home_app:home')
             )

@@ -13,14 +13,14 @@ class User (AbstractBaseUser, PermissionsMixin, models.Model ):
         ('CU','Cuidador')
     )
 
-    username = models.CharField(max_length=50, unique=True)
+    username = models.CharField(max_length=16, unique=True)
     email = models.EmailField()
-    rut = models.CharField(max_length=10)
-    nombres= models.CharField(max_length=100, blank=True)
-    apellidos= models.CharField(max_length=100 ,blank=True)
-    telefono= models.CharField(max_length=9,blank=True)
-    tipodeusuario=models.CharField(max_length=2,choices=TIPOUSER_CHOICES)
-    #categoria = models.ForeignKey(Categoria, on_delete=models.CASCADE)
+    rut = models.CharField(max_length=9)
+    nombres= models.CharField(max_length=100 )
+    apellidos= models.CharField(max_length=100 )
+    telefono= models.CharField(max_length=9)
+    #tipodeusuario=models.CharField(max_length=2,choices=TIPOUSER_CHOICES)
+    categoria = models.ForeignKey(Categoria, on_delete=models.CASCADE,null=True)
     #
     is_staff = models.BooleanField(default=False) #para especificar si el usuario es administrador
 

@@ -1,0 +1,40 @@
+.Sub1{
+    color: black;
+    text-indent: 50px;
+    /* text-shadow: 1px 2px 2px rgba(0,0,0,0.5); */
+    font-size: 2.5em;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+hr{
+    border: solid 2px black;
+}
+.grid-container {
+    display: grid;
+    column-gap: 50px;
+    grid-template-columns: auto auto auto;
+    padding: 10px;
+  }
+  
+.grid-item {
+    background-color: rgba(255, 255, 255, 0.8);
+   
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+  }
+
+  .grid-container2 {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: 500px 500px;
+    padding: 10px;
+  }
+  .grid-item2 {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.8);   
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+  }
+

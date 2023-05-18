@@ -33,7 +33,9 @@
 
             <form action="#" method="POST">
                 {% csrf_token %}
-                <div class="mb-4">
+
+                {{ form.as_p }}
+              <!--  <div class="mb-4">
                     <div class="cell medium-12">
                         <label>Nombre de usuario:</label>
                         <div class="input-group">
@@ -47,10 +49,11 @@
                         <div class="input-group">
                           <span class="input-group-label"><i class="fi-lock"></i></span>
                           {{form.password}}
-                        </div>
-                      </div>
 
-                </div>
+                        </div>
+                      </div> 
+
+                </div>-->
                 <div class="d-grid">
                     <button type="submit" class="btn btn-info">Ingresar</button>
                 </div>

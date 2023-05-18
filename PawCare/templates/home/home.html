@@ -1,10 +1,132 @@
 {% extends 'base.html' %}
+{% load static %}
+
 
 {% block content %} 
+<link href="{% static 'css/home.css' %}" type="text/css" rel="stylesheet">
 
-<div>
-    <p>Probando plantilla para Home</p>
-</div>
+<!-- Carrusel-->
+<div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active" data-bs-interval="10000">
+        <img src="{% static 'img/slider1.jpg' %}" class="d-block w-100" alt="50">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>First slide label</h5>
+          <p>Some representative placeholder content for the first slide.</p>
+        </div>
+      </div>
+      <div class="carousel-item" data-bs-interval="1000">
+        <img src="{% static 'img/slider2.jpg' %}" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Second slide label</h5>
+          <p>Some representative placeholder content for the second slide.</p>
+        </div>
+      </div>
+      <div class="carousel-item" data-bs-interval="1000">
+        <img src="{% static 'img/slider3.jpg' %}" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Third slide label</h5>
+          <p>Some representative placeholder content for the third slide.</p>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  <!-- Fin Carrusel-->
+
+  <br>
+  <div class="Sub1">Ultima información</div>
+  <hr>
+  <!--Tarjetas-->
+   <div class="grid-container">
+    <div class="grid-item">
+        <div class="card" >
+            <img class="card-img-top" src="{% static 'img/card1.jpg' %}" alt="Card image cap">
+            <div class="card-body">
+            <h1>La organización animalista Peludos</h1>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis 
+              nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+               nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+        </div>
+    </div>
+    <div class="grid-item">
+        <div class="card" >
+            <img class="card-img-top" src="{% static 'img/card2.jpeg' %}" alt="Card image cap">
+            <div class="card-body">
+              <h1>La campaña por adoptar aumenta este mes </h1>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis 
+              nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+               nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+        </div>
+    </div>
+    <div class="grid-item">
+        <div class="card" >
+            <img class="card-img-top" src="{% static 'img/card3.jpg' %}" alt="Card image cap">
+            <div class="card-body">
+              <h1>Al solicitar algun servicio ayudas a miles de animales</h1>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis 
+              nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+               nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+        </div>
+    </div>   
+  </div>
+  <!--Fin Tarjetas-->
+
+
+
+
+
+  <div class="grid-container2">
+  
+    <div class="grid-item2">
+<center><div class="card" style="width:400px ">
+        <img class="card-img-top1" src="{% static 'img/cyan.png' %}" alt="Card image">
+        <div class="card-img-overlay">
+          <h4 class="card-title">John Doe</h4>
+          <p class="card-text">Some example text.</p>
+          <a href="#" class="btn btn-primary">See Profile</a>
+        </div>
+      </div> </center> 
+    </div>
+
+    <div class="grid-item2">
+  <center><div class="card" style="width:500px " >
+        <div class="card-img-overlay">
+          <h4 class="card-title">John Doe</h4>
+          <p class="card-text">Some example text.</p>
+        </div>
+      </div></center> 
+    </div>
+
+    <div class="grid-item2">
+  <center><div class="card" style="width:400px">
+        <img class="card-img-top1" src="{% static 'img/4.png' %}" alt="Card image">
+        <div class="card-img-overlay">
+          <p class="card-text1">Registrarte Aqui!!.</p>
+          <a href="#" class="btn btn-primary">See Profile</a>
+        </div>
+      </div></center>
+    </div>  
+   
+ 
+  </div>
+
+
 
 
 {% endblock %}
